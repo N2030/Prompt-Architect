@@ -1,3 +1,4 @@
+cat > bootstrap.sh <<'SCRIPT_EOF'
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -102,32 +103,4 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.egg-info/
-.pytest_cache/
-.mypy_cache/
-.coverage
-htmlcov/
-.env
-.venv
-server/.venv/
-
-# Jupyter (if later added)
-.ipynb_checkpoints/
-
-# OS / Editor
-.DS_Store
-Thumbs.db
-.vscode/
-GI
-
-echo "==> write README.md"
-if [ ! -f README.md ]; then
-  cat > README.md <<'MD'
-# Prompt Architect (React + Python)
-
-Polyglot Codespace: React/TypeScript client (`/client`) + Python Flask API (`/server`).
-
-## Quick Start (after Codespace build)
-- **Client**:
-  ```bash
-  cd client
-  npm run dev
+.pyt
